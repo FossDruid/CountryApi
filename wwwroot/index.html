@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling.css">
+
     <title>CountryApi - Country list</title>
 </head>
 <body>
@@ -13,19 +14,26 @@
         <li><a href="newCountry.html">New</a></li>
         <li><a href="searchCountry.html">Search</a></li>
     </ul> 
-    <!--  append tasks here for test  -->
     </div>
+    <form class="buttons">
+    </form>
+
     <button type="button" id="getDataButton">fetch</button>
-    <table class ="dataTable" id="countryTable" width="400" cellpadding="10" cellspacing="5">
-        <tr>
+    <div id="countryTableContainer">
+    <table class ="dataTable" id="countryTable">
+        <thead id>
+        <tr id="dataTableTopRow">
             <!-- top row -->
                 <th>Name</th>   <!-- Country name   -->
-                <th>Population</th>   <!-- Country Population -->
-                <th>Continent</th>   <!-- Country Continent  -->
-                <th>db id</th>   <!-- Country id -->
+                <th>Population</th>  <!-- Country Population -->
+                <th>Continent</th>  <!-- Continent  -->
+                <th>db id</th>  <!-- Country id -->
         </tr>
+        </tfoot>
+        </thead>
     </table>
-    <script src="main.js"></script>
 
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
