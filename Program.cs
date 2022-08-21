@@ -40,6 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 //  wwwroot
 app.UseStaticFiles();
 app.UseRouting();

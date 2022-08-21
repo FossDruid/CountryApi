@@ -6,6 +6,5 @@ namespace CountryApi{
         public string name {get;set;} = string.Empty;
         public int population {get;set;}
         public string continent {get;set;} = string.Empty;
-        
     }
 }

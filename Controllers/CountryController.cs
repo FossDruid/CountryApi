@@ -28,12 +28,14 @@ namespace CountryApi.Controllers{
             this.countryContext = countryContext;
         }
 
+        // use try and catch stuff!!!
+
         [HttpGet]
         public async Task<ActionResult<List<Country>>> Get(){
            return Ok(await countryContext.Countries.ToListAsync()); 
         }
 
-        // Get id Country (singular)
+        // Returns country by given id
         [HttpGet("{id}")]
         public async Task<ActionResult<List<Country>>> Get(int id){
             var idCountry = countryContext.Countries.FindAsync(id);
@@ -44,7 +46,6 @@ namespace CountryApi.Controllers{
         }
 
         [HttpPost]
-
         public async Task<ActionResult<List<Country>>> AddCountry(Country newCountry){
             this.countryContext.Add(newCountry);
             await this.countryContext.SaveChangesAsync();
