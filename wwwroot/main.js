@@ -25,6 +25,16 @@ async function fetchApiData(){
         const respons = await fetch("https://localhost:7028/api/Country/");
         var responseData = await respons.json();
 
+        // Variable for sorting alphabetically
+        var sortedJsonData = responseData;
+        sortedJsonData.sort(function (a, b) {
+            var contA = a.continent.toUpperCase();
+            var contB = b.continent.toUpperCase();
+
+            return contA.localeCompare(contB);
+        });
+        console.log(sortedJsonData);
+
         // const responseDataParsed = JSON.stringify(responseData);
         console.log(responseData);
 
