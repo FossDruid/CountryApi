@@ -18,7 +18,10 @@ in the api you can:
 - To see the html pages, go to localhost:YOUR_PORT/index.html, newCountry.html or searchCountry.html (There is a navbar for navigation).
 
 ## Current known issues
-- 
+- Some lacking exception handling. 
+- The fetch button in main.js dosen't clear previous fetched data-elements.
+- searchCountryScript.js shows the entire error message in innerhtml instead of "Country not found"
+- Dosen't check for duplicates and case sensitivity on data input&database.
 
 ## Future development / to do
 - Implement better architecture
