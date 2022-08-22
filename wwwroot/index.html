@@ -8,34 +8,37 @@
     <title>Country Fetch</title>
 </head>
 <body>
-    <div id="navbar">
-        <ul>
-            <li><a class="activePage" href="index.html">Fetch</a></li>
-            <li><a href="newCountry.html">New</a></li>
-            <li><a href="searchCountry.html">Search</a></li>
-        </ul>
+    <div id="pageWrapper">
+
+        <div id="navbar">
+            <ul>
+                <li><a class="activePage" href="index.html">Fetch</a></li>
+                <li><a href="newCountry.html">New</a></li>
+                <li><a href="searchCountry.html">Search</a></li>
+            </ul>
+        </div>
+        <div id="topText">
+            <h2>Country fetcher</h2>
+            <p>Click on the fetch button to get a list of countries and its data</p>
+        </div>
+
+        <form class="buttons">
+        </form>
+
+        <button type="button" id="getDataButton">fetch</button>
+        <div id="countryTableContainer">
+            <table class="dataTable" id="countryTable">
+                <tr id="dataTableTopRow">
+                    <!-- top row -->
+                    <th>Name</th>   <!-- Country name   -->
+                    <th>Population</th>  <!-- Country Population -->
+                    <th>Continent</th>  <!-- Continent  -->
+                    <th>db id</th>  <!-- Country id -->
+                </tr>
+            </table>
+
+        </div>
+        <script src="main.js"></script>
     </div>
-
-    <h2>Country fetcher</h2>
-    <p>Click on the fetch button to get a list of countries and its data</p>
-
-
-    <form class="buttons">
-    </form>
-
-    <button type="button" id="getDataButton">fetch</button>
-    <div id="countryTableContainer">
-        <table class="dataTable" id="countryTable">
-            <tr id="dataTableTopRow">
-                <!-- top row -->
-                <th>Name</th>   <!-- Country name   -->
-                <th>Population</th>  <!-- Country Population -->
-                <th>Continent</th>  <!-- Continent  -->
-                <th>db id</th>  <!-- Country id -->
-            </tr>
-        </table>
-
-    </div>
-    <script src="main.js"></script>
 </body>
 </html>

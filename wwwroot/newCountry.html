@@ -8,29 +8,31 @@
     <title>New Country Page</title>
 </head>
 <body>
-    <div id="navbar">
-        <ul>
-            <li><a class="activePage" href="index.html">Fetch</a></li>
-            <li><a href="newCountry.html">New</a></li>
-            <li><a href="searchCountry.html">Search</a></li>
-        </ul>
-    </div>
-
-    <h2>New country</h2>
-    <p>Input wanted country's name, population and continent.</p>
-    <div id="postWrapper">
-        <form id="dataInputForm">
-            <p>Name:</p>
-            <input type="text" id="inputName"><br>
-            <p>Population</p>
-            <input type="text" id="inputPopulation"><br>
-            <p>Continent</p>
-            <input type="text" id="inputContinent"><br>
-            <input type="button" id="inputSubmitBtn" value="Submit"><hr>
-            <p id="postStatusText">Status text</p>
-        </form>
+    <div id="pageWrapper">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Fetch</a></li>
+                <li><a class="activePage" href="newCountry.html">New</a></li>
+                <li><a href="searchCountry.html">Search</a></li>
+            </ul>
+        </div>
+        <div id="topText">
+            <h2>New country</h2>
+            <p>Input wanted country's name, population and continent.</p>
+        </div>
+        <div id="postWrapper">
+            <form id="dataInputForm">
+                <p>Name:</p>
+                <input type="text" id="inputName"><br>
+                <p>Population</p>
+                <input type="text" id="inputPopulation"><br>
+                <p>Continent</p>
+                <input type="text" id="inputContinent"><br>
+                <input type="button" id="inputSubmitBtn" value="Submit"><hr>
+                <p id="postStatusText">Status text</p>
+            </form>
+        </div>
     </div>
     <script src="newCountryScript.js"></script>
-
 </body>
 </html>
