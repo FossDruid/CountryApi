@@ -11,7 +11,7 @@ async function fetchApiContinentData(){
 
         var response = await fetch("https://localhost:7028/api/Country/" + wantedCountryInput);
         console.log(response);
-        var responseData = await response.json();
+        var responseData = await response.text();
         console.log(responseData);
         apiResponseContinentTxt.innerHTML = responseData;
 
@@ -20,4 +20,5 @@ async function fetchApiContinentData(){
     catch(error){
         console.log(error);
     }
+
 }

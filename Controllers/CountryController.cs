@@ -49,9 +49,14 @@ namespace CountryApi.Controllers{
         [HttpGet("{name}")]
         public ActionResult<Country> Get(string name)
         {
-            if (countryContext != null)
+            if (countryContext == null)
             {
+                return BadRequest()
                 Country countries = countryContext.Countries.FirstOrDefault(p => p.name == name);
+                if(countries == null)
+                {
+                    return BadRequest("Country not found");
+                }
                 return Ok(countries.continent);
             }
             return BadRequest();
