@@ -25,6 +25,7 @@ body {
 }
 
 #dataTableTopRow {
+    font-size: 20px;
     color: #ff5349;
 }
 
@@ -41,11 +42,11 @@ body {
 
     width: fit-content;
     border: .01rem #e0e1ed;
-    border-radius: 20px;
+    border-radius: 200px;
     list-style-type: none;
  
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
     background-color: #333;
 }
