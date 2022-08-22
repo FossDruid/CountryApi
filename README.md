@@ -1,28 +1,26 @@
 # CountryApi
+#### Api in dotnet6
 Api in dotnet6
-
-# CountryApi
-Api in dotnet6
-  
-* Welcome to CountryApi, a simple dotnet6 webapi written in dotnet.
+# Welcome to **CountryApi*, a simple webapi written in ASP.NET6.
 in the api you can:
 - Get data about countries, such as a country's continent and population.
 - Add new countries
 - Search after a specific continent by name and get its corresponding continent.
 
-* Techstack:
-- C#.NETcore6 web api (Backend), Uses swagger for testing api.
-- Html, css and javascript (Frontend). Will migrate over to vuejs (future)
-- Sqlite3 (Database)
+## Techstack:
+- **Backend:** C#.NETcore6 web ap, Uses swagger for testing api.
+- **Frontend:** Html, css and javascript. Will migrate over to vuejs (future)
+- **Database** Sqlite3
 
-* Usage guide.
+## Usage guide.
+- The html pages are in wwwroot, go to localhost/index.html instead of swagger to view the actual page.
 - Swagger will boot up on build, if you're using another port remember to change it in the js file on the async fetch functions.
 - To see the html pages, go to localhost:YOUR_PORT/index.html, newCountry.html or searchCountry.html (There is a navbar for navigation).
 
-* Current known issues
+## Current known issues
 - 
 
-* Future development / to do
+## Future development / to do
 - Export data to CSV format for analysis in spreadsheet-software.
 - Convert frontend to Vue.js
 - Make a class continent to refer to continent in a country.
