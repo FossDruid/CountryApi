@@ -43,9 +43,9 @@ async function postSubmitData(){
         .then(respone => response.json())
         .then(json => console.log())
         // Concatenate this
-        .then(postStatusTextP.innerHTML = "Data of: " + postData + " | added successfully.")
+        .then(postStatusTextP.innerHTML = "Data added.")
+        //.then(postStatusTextP.innerHTML = "Data of: " + postData + " | added successfully.")
         .catch(error => console.log(error))
-        console.log("Data added");
         
 
 }

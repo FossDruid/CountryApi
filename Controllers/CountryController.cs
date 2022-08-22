@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace CountryApi.Controllers{
     [Route("api/[controller]")]
@@ -42,14 +43,6 @@ namespace CountryApi.Controllers{
             if(idCountry == null)
                 return BadRequest("Country not found)");
             return Ok(await idCountry); 
-        }
-
-        [HttpGet("name/{name}")]
-        public async Task<ActionResult<List<Country>>> Get(string name){
-            var countryName = countryContext.Countries.FindAsync(name);
-            if (countryName == null)
-                return BadRequest("Countryname not found");
-            return Ok(await countryName);
         }
 
         [HttpPost]
