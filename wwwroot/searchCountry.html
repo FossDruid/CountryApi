@@ -8,29 +8,31 @@
     <title>Search Country Page</title>
 </head>
 <body>
-    <div id="navbar">
-        <ul>
-            <li><a href="index.html">Fetch</a></li>
-            <li><a href="newCountry.html">New</a></li>
-            <li><a class="activePage" href="searchCountry.html">Search</a></li>
-        </ul>
-    </div>
+    <div id="pageWrapper">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Fetch</a></li>
+                <li><a href="newCountry.html">New</a></li>
+                <li><a class="activePage" href="searchCountry.html">Search</a></li>
+            </ul>
+        </div>
 
-    <div>
-        <h2>Country Search</h2>
-        <p>Search for a country by name to get its continent.</p>
-    </div>
+        <div class="topText">
+            <h2>Continent of country Search</h2>
+            <p>Search for a country by name to get its continent.</p>
+        </div>
 
-    <div id="fetchIdWrapper">
-        <form id="dataSearchForm">
-            <h3>
-                Name:</p>
-                <input type="text" id="inputName"><br>
-                <input type="button" id="inputSubmitBtn" value="Search"><hr>
-                <h3>Continent:</h3>
-                <p id="dataResponseContinent">"Continent data comes here"</p>
-        </form>
+        <div class="searchWrapper">
+            <form id="dataSearchForm">
+                <h3>
+                    Name of country:</p>
+                    <input type="text" id="inputName"><br>
+                    <input type="button" id="inputSubmitBtn" value="Search"><hr>
+                    <h3>Continent:</h3>
+                    <p id="dataResponseContinent">"Continent data comes here"</p>
+            </form>
+        </div>
+        <script src="searchCountryScript"></script>
     </div>
-    <script src="searchCountryScript"></script>
 </body>
 </html>

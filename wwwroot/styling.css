@@ -15,11 +15,11 @@ body {
     padding: 30px;
 }
 
-.CountryTableContainer, th, td{
+#CountryTableContainer, th, td{
     border: 1px solid black;
 }
 
-.CountryTableContainer{
+#CountryTableContainer{
     width: 80%;
     border-collapse: collapse;
 }
@@ -50,22 +50,22 @@ body {
     overflow: hidden;
     background-color: #333;
 }
-
-.navbar, li {
+navbar, li {
     float: left;
 }
 
-.navbar, li a {
+#navbar, li a {
     display: inline-block;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-.navbar, li a:hover:not(.activePage) {
+/*
+#navbar, li a:hover:not(.activePage) {
     background-color: #111;
 }
 
+    */
 .activePage {
     background-color: #ff6a00;
-}
