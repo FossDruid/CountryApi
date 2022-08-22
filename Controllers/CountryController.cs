@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace CountryApi.Controllers{
     [Route("api/[controller]")]
-    [ApiController] 
-    public class CountryController : ControllerBase{
+    [ApiController]
+    public class CountryController : ControllerBase {
         /* Manual local test
         private static List<Country> country = new List<Country>{
                 new Country{                
@@ -25,24 +26,35 @@ namespace CountryApi.Controllers{
        */
         private readonly CountryContext countryContext;
 
-        public CountryController(CountryContext countryContext){
+        public CountryController(CountryContext countryContext) {
             this.countryContext = countryContext;
         }
 
         // use try and catch stuff!!!
 
         [HttpGet]
-        public async Task<ActionResult<List<Country>>> Get(){
-           return Ok(await countryContext.Countries.ToListAsync()); 
+        public async Task<ActionResult<List<Country>>> Get() {
+            return Ok(await countryContext.Countries.ToListAsync());
         }
 
         // Returns country by given id
         [HttpGet("id/{id}")]
-        public async Task<ActionResult<List<Country>>> Get(int id){
+        public async Task<ActionResult<List<Country>>> Get(int id) {
             var idCountry = countryContext.Countries.FindAsync(id);
-            if(idCountry == null)
+            if (idCountry == null)
                 return BadRequest("Country not found)");
-            return Ok(await idCountry); 
+            return Ok(await idCountry);
+        }
+
+        [HttpGet("{name}")]
+        public ActionResult<Country> Get(string name)
+        {
+            if (countryContext != null)
+            {
+                Country countries = countryContext.Countries.FirstOrDefault(p => p.name == name);
+                return Ok(countries.continent);
+            }
+            return BadRequest();
         }
 
         [HttpPost]
@@ -52,6 +64,8 @@ namespace CountryApi.Controllers{
 
             return Ok(await this.countryContext.Countries.ToListAsync());
         }
+
+
 
         [HttpPut]
         public async Task<ActionResult<List<Country>>> UpdateCountry(Country request){

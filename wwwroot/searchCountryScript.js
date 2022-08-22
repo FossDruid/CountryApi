@@ -1,28 +1,19 @@
-var getCountryContinentData = document.getElementById('getDataButton');
-var countryContinentWrapper = document.getElementById('fetchIdWrapper');
-getCountryContinentData.addEventListener('click', fetchApiContinentData);
+var searchBtn = document.getElementById('inputSubmitBtn');
+var countryTxtField = document.getElementById('inputName');
+var apiResponseContinentTxt = document.getElementById('dataResponseContinent');
+searchBtn.addEventListener('click', fetchApiContinentData)
+
 
 async function fetchApiContinentData(){
     console.log("Attempting to fetch data from api...");
-    try{
-        const respons = await fetch("https://localhost/api/Country/");
+    try {
+        var wantedCountryInput = countryTxtField.value;
+
+        var responseData = await fetch(("https://localhost/api/Country/" + wantedCountryInput));
         var responseData = await respons.json();
-
-        // const responseDataParsed = JSON.stringify(responseData);
         console.log(responseData);
+        apiResponseContinentTxt.innerHTML = responseData;
 
-        // Iterates through api data and displays it. Hacky but works for now.
-        for (let i = 0; i < responseData.length; i++){
-            // iteration test. Just simple log
-            // variable name of "c"X meaning country
-            cName = responseData[i]["name"];
-            cContinent = responseData[i]["continent"];
-            cId = responseData[i]["id"];
-            console.log(cName + " is in contient: " + cContinent);
-            //  Array for iteration
-            //  var dataArr = [cId, cContinent, cPopulation, cName];
-            //  Data table display
-        }
         return responseData;
     }
     catch(error){
