@@ -11,9 +11,6 @@
 //  Code cleanup:
 //  Check - Issue 5
 
-// For some reason, refering to this const dosen't work(?)
-//const apiUrl = fetch("https://localhost:7028/api/Country/");
-
 //  Fetch button
 var getCountryData = document.getElementById('getDataButton');
 var countryTableContainer = document.getElementById('tableContainer');
@@ -23,7 +20,8 @@ async function fetchApiData() {
     // clear previous fetch data
 
     console.log("Attempting to fetch data from api...")
-    try{
+    try {
+        location.reload(); 
         const respons = await fetch("https://localhost:7028/api/Country/");
         var responseData = await respons.json();
 

@@ -6,23 +6,6 @@
 var dataInputName = document.getElementById('inputName');
 var dataInputPopulation = document.getElementById('inputPopulation');
 var dataInputContinent = document.getElementById('inputContinent');
-/*
-async function fetchApiData(){
-    console.log("Attempting to fetch data from api...")
-    try{
-        const respons = await fetch("https://localhost:7028/api/Country/");
-        var responseData = await respons.json();
-
-        // const responseDataParsed = JSON.stringify(responseData);
-        //console.log(responseData);
-
-        return responseData;
-    }
-    catch(error){
-        console.log(error);
-    }
-}
-*/
 async function postSubmitData(){
     const response = await fetch("https://localhost:7028/api/Country/");
 
