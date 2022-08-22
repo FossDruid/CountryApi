@@ -9,8 +9,9 @@ async function fetchApiContinentData(){
     try {
         var wantedCountryInput = countryTxtField.value;
 
-        var responseData = await fetch(("https://localhost/api/Country/" + wantedCountryInput));
-        var responseData = await respons.json();
+        var response = await fetch("https://localhost:7028/api/Country/" + wantedCountryInput);
+        console.log(response);
+        var responseData = await response.json();
         console.log(responseData);
         apiResponseContinentTxt.innerHTML = responseData;
 

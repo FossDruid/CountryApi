@@ -13,8 +13,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy  =>
                       {
-                          policy.WithOrigins("https://localhost:7028/index.html", "https://localhost:7028/api/Country/")
-                          // it works, great. Finally. Just had to allow it all.
+                          policy.WithOrigins("https://localhost:7028/index.html")
                           .AllowAnyOrigin()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
