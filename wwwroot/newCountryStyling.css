@@ -1,3 +1,35 @@
 body {  
     background-color: lightgrey;
 }
+
+.navbar, ul {
+    position: absolute;
+    width: fit-content;
+    border: .01rem round #e0e1ed;
+    border-radius: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar, li {
+    float: left;
+}
+
+.navbar, li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar, li a:hover:not(.activePage) {
+    background-color: #111;
+}
+
+.activePage {
+    background-color: #ff6a00;
+}
