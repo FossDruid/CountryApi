@@ -21,7 +21,6 @@ async function fetchApiData() {
 
     console.log("Attempting to fetch data from api...")
     try {
-        location.reload(); 
         const respons = await fetch("https://localhost:7028/api/Country/");
         var responseData = await respons.json();
 
