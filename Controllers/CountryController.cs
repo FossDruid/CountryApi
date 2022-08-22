@@ -36,13 +36,20 @@ namespace CountryApi.Controllers{
         }
 
         // Returns country by given id
-        [HttpGet("{id}")]
+        [HttpGet("id/{id}")]
         public async Task<ActionResult<List<Country>>> Get(int id){
             var idCountry = countryContext.Countries.FindAsync(id);
             if(idCountry == null)
                 return BadRequest("Country not found)");
-            
             return Ok(await idCountry); 
+        }
+
+        [HttpGet("name/{name}")]
+        public async Task<ActionResult<List<Country>>> Get(string name){
+            var countryName = countryContext.Countries.FindAsync(name);
+            if (countryName == null)
+                return BadRequest("Countryname not found");
+            return Ok(await countryName);
         }
 
         [HttpPost]
