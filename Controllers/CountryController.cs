@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CountryApi.Controllers{
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController] 
     public class CountryController : ControllerBase{
         /* Manual local test
         private static List<Country> country = new List<Country>{

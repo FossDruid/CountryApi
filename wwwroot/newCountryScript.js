@@ -32,23 +32,22 @@ async function postSubmitData(){
         "population": document.getElementById("inputPopulation").value,
         "continent": document.getElementById("inputContinent").value
     });
-    fetch('https://localhost:7028/api/Country/',{
+    fetch('https://localhost:7028/api/Country/', {
         method: "POST",
-        headers:{
+        headers: {
             'Content-Type': 'application/json'
         },
         body: postData
     })
         .then(respone => response.json())
         .then(json => console.log())
+        // Concatenate this
+        .then(postStatusTextP.innerHTML = "Data of: " + postData + " | added successfully.")
         .catch(error => console.log(error))
         console.log("Data added");
+        
+
 }
 var postStatusTextP = document.getElementById('postStatusText');
-
 var submitDataButton = document.getElementById('inputSubmitBtn');
 submitDataButton.addEventListener('click', postSubmitData);
-
-/*
-var workableData = fetchApiData();
-console.log(workableData);*/
