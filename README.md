@@ -21,6 +21,7 @@ in the api you can:
 - 
 
 ## Future development / to do
+- Implement better architecture
 - Export data to CSV format for analysis in spreadsheet-software.
 - Convert frontend to Vue.js
 - Make a class continent to refer to continent in a country.
