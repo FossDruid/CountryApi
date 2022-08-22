@@ -5,7 +5,7 @@ getCountryContinentData.addEventListener('click', fetchApiContinentData);
 async function fetchApiContinentData(){
     console.log("Attempting to fetch data from api...");
     try{
-        const respons = await fetch("https://localhost:7028/api/Country/");
+        const respons = await fetch("https://localhost/api/Country/");
         var responseData = await respons.json();
 
         // const responseDataParsed = JSON.stringify(responseData);

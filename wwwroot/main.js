@@ -11,9 +11,6 @@
 //  Code cleanup:
 //  Check - Issue 5
 
-// For some reason, refering to this const dosen't work(?)
-//const apiUrl = fetch("https://localhost:7028/api/Country/");
-
 //  Fetch button
 var getCountryData = document.getElementById('getDataButton');
 var countryTableContainer = document.getElementById('tableContainer');
