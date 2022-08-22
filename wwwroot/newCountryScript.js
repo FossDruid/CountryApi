@@ -3,9 +3,9 @@
 // - Check db if country exists
 
 
-document.getElementById('inputName');
-document.getElementById('inputPopulation');
-document.getElementById('inputContinent');
+var dataInputName = document.getElementById('inputName');
+var dataInputPopulation = document.getElementById('inputPopulation');
+var dataInputContinent = document.getElementById('inputContinent');
 /*
 async function fetchApiData(){
     console.log("Attempting to fetch data from api...")
@@ -25,12 +25,13 @@ async function fetchApiData(){
 */
 async function postSubmitData(){
     const response = await fetch("https://localhost:7028/api/Country/");
+
     
     console.log("posting your data to api...")
     var postData = JSON.stringify({
-        "name": document.getElementById("inputName").value,
-        "population": document.getElementById("inputPopulation").value,
-        "continent": document.getElementById("inputContinent").value
+        "name": dataInputName.value,
+        "population": dataInputPopulation.value,
+        "continent": dataInputContinent.value
     });
     fetch('https://localhost:7028/api/Country/', {
         method: "POST",
