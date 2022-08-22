@@ -10,27 +10,31 @@
 </head>
 <body>
     <div id="navbar">
-     <ul>
-        <li><a class="activePage" href="index.html"</a>Fetch</li>
-        <li><a href="newCountry.html">New</a></li>
-        <li><a href="searchCountry.html">Search</a></li>
-    </ul> 
+        <ul>
+            <li><a class="activePage" href="index.html"</a>Fetch</li>
+            <li><a href="newCountry.html">New</a></li>
+            <li><a href="searchCountry.html">Search</a></li>
+        </ul>
     </div>
+
+    <h2>Country fetcher</h2>
+    <p>Click on the fetch button to get a list of countries and its data</p>
+
 
     <form class="buttons">
     </form>
 
     <button type="button" id="getDataButton">fetch</button>
     <div id="countryTableContainer">
-    <table class ="dataTable" id="countryTable">
-        <tr id="dataTableTopRow">
-            <!-- top row -->
+        <table class="dataTable" id="countryTable">
+            <tr id="dataTableTopRow">
+                <!-- top row -->
                 <th>Name</th>   <!-- Country name   -->
                 <th>Population</th>  <!-- Country Population -->
                 <th>Continent</th>  <!-- Continent  -->
                 <th>db id</th>  <!-- Country id -->
-        </tr>
-    </table>
+            </tr>
+        </table>
 
     </div>
     <script src="main.js"></script>
