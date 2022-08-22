@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="pageWrapper">
-
         <div id="navbar">
             <ul>
                 <li><a class="activePage" href="index.html">Fetch</a></li>
@@ -18,14 +17,15 @@
             </ul>
         </div>
         <div id="topText">
-            <h2>Country fetcher</h2>
+            <h2>Country Fetcher</h2>
             <p>Click on the fetch button to get a list of countries and its data</p>
         </div>
 
         <form class="buttons">
+            <button type="button" id="getDataButton">fetch</button>
+            <button type="button" id="clearDataButton">clear</button>
         </form>
 
-        <button type="button" id="getDataButton">fetch</button>
         <div id="countryTableContainer">
             <table class="dataTable" id="countryTable">
                 <tr id="dataTableTopRow">
@@ -38,6 +38,7 @@
             </table>
 
         </div>
+
         <script src="main.js"></script>
     </div>
 </body>

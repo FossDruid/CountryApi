@@ -2,13 +2,13 @@
 // functions:
 // - Form to add a country to an existing or new continent
 // - List to display all countries grouped by continent
-// - Search for a country by name and display the results with the 
+// - Search for a country by name and display the results with the
 // continent information.
 // make library of fetch command? need to make it reusable!
 
 // - Clear created dataTable elements upon re-clicking the fetch button.
 
-//  Code cleanup: 
+//  Code cleanup:
 //  Check - Issue 5
 
 // For some reason, refering to this const dosen't work(?)
@@ -19,7 +19,9 @@ var getCountryData = document.getElementById('getDataButton');
 var countryTableContainer = document.getElementById('tableContainer');
 getCountryData.addEventListener('click', fetchApiData);
 
-async function fetchApiData(){
+async function fetchApiData() {
+    // clear previous fetch data
+
     console.log("Attempting to fetch data from api...")
     try{
         const respons = await fetch("https://localhost:7028/api/Country/");
@@ -47,7 +49,6 @@ async function fetchApiData(){
             cPopulation = responseData[i]["population"];
             cId = responseData[i]["id"];
             console.log(cName + " is in contient: " + cContinent);
-            
             //  Array for iteration
             var dataArr = [cId, cContinent, cPopulation, cName];
 
@@ -67,3 +68,10 @@ async function fetchApiData(){
         console.log(error);
     }
 }
+
+function clearDataHtmlElements() {
+    var htmlDataTableNodes = document.getElementById('dataTableId21');
+    htmlDataTableNodes.innerHTML = "Hello";
+    alert("WORKS");
+}
+
