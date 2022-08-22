@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="searchCountryStyle.css">
+    <link rel="stylesheet" href="searchCountryStyle.css">
     <title>Search Country Page</title>
 </head>
 <body>
     <div id="navbar">
         <ul>
-            <li><a class="activePage" href="index.html"</a>Fetch</li>
+            <li><a href="index.html">Fetch</a></li>
             <li><a href="newCountry.html">New</a></li>
-            <li><a href="searchCountry.html">Search</a></li>
+            <li><a class="activePage" href="searchCountry.html">Search</a></li>
         </ul>
-    </div>  
+    </div>
+    <div>
+        <h2>Country Search</h2>
+        <p>Search for a country by name to get its continent.</p>
+    </div>
 
-    <h2>Country Search</h2>
-    <p>Search for a country by name to get its continent.</p>
-    <script src="searchCountryScript"></script>
+
     <div id="fetchIdWrapper">
         <form id="dataSearchForm">
             <h3>
@@ -29,7 +31,6 @@
                 <p id="dataResponseContinent">"Continent data comes here"</p>
         </form>
     </div>
-
-
+    <script src="searchCountryScript"></script>
 </body>
 </html>
