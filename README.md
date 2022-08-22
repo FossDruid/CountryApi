@@ -8,7 +8,7 @@ in the api you can:
 - Search after a specific continent by name and get its corresponding continent.
 
 ## Techstack:
-- **Backend:** C#.NETcore6 web ap, Uses swagger for testing api.
+- **Backend:** .NETcore web-api, Uses swagger for testing api.
 - **Frontend:** Html, css and javascript. Will migrate over to vuejs (future)
 - **Database** Sqlite3
 
